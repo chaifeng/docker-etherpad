@@ -1,0 +1,33 @@
+{
+  "ip": "0.0.0.0",
+  "port" : 8000,
+
+  "title": "Etherpad for nerds",
+  "sessionKey": "w31c0m3",
+
+  "dbType" : "mysql",
+  "dbSettings" : {
+    "user"    : "root",
+    "host"    : "MYSQL_HOST_ADDR",
+    "port"    : "MYSQL_HOST_PORT",
+    "password": "MYSQL_ROOT_PWD",
+    "database": "etherpad"
+  },
+
+  "defaultPadText" : "Hi nerds.\n\n",
+
+  "requireSession" : false,
+  "editOnly" : false,
+  "minify" : true,
+  "maxAge" : 21600000, // 6 hours
+  "abiword" : null,
+
+  "loglevel": "DEBUG",
+  "logconfig": {
+    "appenders": [{ "type": "file",
+      "filename": "/var/log/etherpad.log",
+      "maxLogSize": 1024000,
+      "backups": 3
+    }]
+  }
+}
